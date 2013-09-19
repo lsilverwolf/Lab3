@@ -16,6 +16,7 @@ public class MainActivity extends Activity {
 
         Button toFlashlight = (Button) findViewById(R.id.to_flashlight);
         Button toCamera = (Button) findViewById(R.id.to_camera);
+        Button toGPS = (Button) findViewById(R.id.to_gps);
 
         toFlashlight.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -30,6 +31,15 @@ public class MainActivity extends Activity {
                 goToCamera(view);
             }
         });
+
+        toGPS.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                goToGPS(view);
+            }
+        });
+
+
     }
 
 
@@ -40,6 +50,11 @@ public class MainActivity extends Activity {
 
     public void goToCamera(View view){
         Intent i = new Intent(this, CameraActivity.class);
+        startActivity(i);
+    }
+
+    public void goToGPS(View view){
+        Intent i = new Intent(this, GPSActivity.class);
         startActivity(i);
     }
 

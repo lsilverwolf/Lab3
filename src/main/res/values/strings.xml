@@ -9,6 +9,8 @@
     <string name="open_camera">Camera</string>
     <string name="take_picture">Take Picture</string>
     <string name="new_pic_desc">Latest Picture</string>
+    <string name="refresh_location">Show Coordinates</string>
+    <string name="open_gps">GPS</string>
 
 
 </resources>

@@ -27,8 +27,8 @@
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="New Button"
-        android:id="@+id/button3"
+        android:text="@string/open_gps"
+        android:id="@+id/to_gps"
         android:layout_alignTop="@+id/to_camera"
         android:layout_toRightOf="@+id/to_camera" />
 </RelativeLayout>
