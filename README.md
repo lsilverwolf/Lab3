@@ -3,7 +3,7 @@ Lab 3: Yes! We are finally using sensors
 
 Just like the title says, in this lab we are finally using sensors. Get excited.
 
-Github
+Git & Github
 ---
 
 Before we start with Android, we'd like to do a quick review of Github.
@@ -26,8 +26,8 @@ First, a quick overview of the different sensors. And by sensors we are not just
 Yeah, you know that annoying "Can Facebook use your location?" popup. Those things are actually useful...
 
 Android's definition:
-"The Android sensor framework lets you access many types of sensors. Some of these sensors are hardware-based and some are software-based. Hardware-based sensors are physical components built into a handset or tablet device. They derive their data by directly measuring specific environmental properties, such as acceleration, geomagnetic field strength, or angular change. Software-based sensors are not physical devices, although they mimic hardware-based sensors. Software-based sensors derive their data from one or more of the hardware-based sensors and are sometimes called virtual sensors or synthetic sensors. The linear acceleration sensor and the gravity sensor are examples of software-based sensors. Table 1 summarizes the sensors that are supported by the Android platform."
-- Android [Intro to Sensors](http://developer.android.com/guide/topics/sensors/sensors_overview.html)
+<blockquote><p>"The Android sensor framework lets you access many types of sensors. Some of these sensors are hardware-based and some are software-based. Hardware-based sensors are physical components built into a handset or tablet device. They derive their data by directly measuring specific environmental properties, such as acceleration, geomagnetic field strength, or angular change. Software-based sensors are not physical devices, although they mimic hardware-based sensors. Software-based sensors derive their data from one or more of the hardware-based sensors and are sometimes called virtual sensors or synthetic sensors. The linear acceleration sensor and the gravity sensor are examples of software-based sensors. Table 1 summarizes the sensors that are supported by the Android platform."</p>
+<p><cite>- Android [Intro to Sensors](http://developer.android.com/guide/topics/sensors/sensors_overview.html)</cite></p></blockquote>
 
 Some sensors that we are going to cover:
 
@@ -42,8 +42,10 @@ Next, there are a few things that you should be aware of when working with senso
 * Don't test your code on the emulator
 * Verify sensors before you use them
 * Choose sensor delays carefully
-Android [Intro to Sensors](http://developer.android.com/guide/topics/sensors/sensors_overview.html)
 
+Read more at Android's [Intro to Sensors](http://developer.android.com/guide/topics/sensors/sensors_overview.html)
+
+### Permissions
 
 Next, lets talk about permissions.
 
@@ -103,7 +105,9 @@ The new Android Manifest... (is quite a manifest)
 
 Notice that you need to explicitly ask the user for all of these permissions. It is the #1 debugging problem with sensors (aka people forget to ask for permission and then cannot figure out why they can't access the sensor), so just keep it in the back of your mind.
 
-Next, let's take a look at one of the sensors, GPS.
+### GPS
+
+Next, let's take a look at one of the sensors, GPS. Note that the classes used here are specifically for use with this lab, i.e. we provide several wrapper classes. Working with location is hard! We won't reinvent the wheel.
 
 ```java
 public class GPSActivity extends Activity {
@@ -144,7 +148,9 @@ public class GPSActivity extends Activity {
 }
 ```
 
-And a more complicated sensor such as the camera
+### Camera
+
+A more complicated sensor such as the camera involves its own UI. This way of invoking and using hte sensor uses an external Intent... again, much of the code here is used by helper classes in the code we provide. Let us know any questions you have about how to get them working.
 
 ```java
 public class CameraActivity extends Activity {
