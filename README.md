@@ -9,7 +9,7 @@ Github
 Before we start with Android, we'd like to do a quick review of Github.
 
 Why do we use git? _Version Control (:_
-Some git commands we would like to conver:
+Some git commands we would like to cover:
 
 ```
 git add .
@@ -25,7 +25,7 @@ First, a quick overview of the different sensors. And by sensors we are not just
 
 Yeah, you know that annoying "Can Facebook use your location?" popup. Those things are actually useful...
 
-Android's definition
+Android's definition:
 "The Android sensor framework lets you access many types of sensors. Some of these sensors are hardware-based and some are software-based. Hardware-based sensors are physical components built into a handset or tablet device. They derive their data by directly measuring specific environmental properties, such as acceleration, geomagnetic field strength, or angular change. Software-based sensors are not physical devices, although they mimic hardware-based sensors. Software-based sensors derive their data from one or more of the hardware-based sensors and are sometimes called virtual sensors or synthetic sensors. The linear acceleration sensor and the gravity sensor are examples of software-based sensors. Table 1 summarizes the sensors that are supported by the Android platform."
 - Android [Intro to Sensors](http://developer.android.com/guide/topics/sensors/sensors_overview.html)
 
@@ -50,7 +50,8 @@ Android [Intro to Sensors](http://developer.android.com/guide/topics/sensors/sen
 Next, lets talk about permissions.
 
 The new Android Manifest... (is quite a manifest)
-```
+
+```xml
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.mobileproto.lab3"
@@ -106,7 +107,7 @@ Notice that you need to explicitly ask the user for all of these permissions. It
 
 Next, let's take a look at one of the sensors, GPS.
 
-```
+```java
 public class GPSActivity extends Activity {
 
     @Override
@@ -147,7 +148,7 @@ public class GPSActivity extends Activity {
 
 And a more complicated sensor such as the camera
 
-```
+```java
 public class CameraActivity extends Activity {
 
 
@@ -206,4 +207,4 @@ Now this is where you guys get to start being creative. Your task is to create a
 * A way to integrate at least two sensors
 * The actual idea behind the app itself is up to you
 
-
+It is due on Monday at the start of class.
