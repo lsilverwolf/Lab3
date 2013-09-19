@@ -1,4 +1,4 @@
-Lab 3 - Hell yes, we are finally using sensors
+Lab 3: Yes! We are finally using sensors
 ===
 
 Just like the title says, in this lab we are finally using sensors. Get excited.
