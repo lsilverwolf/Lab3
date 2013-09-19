@@ -33,10 +33,8 @@ Some sensors that we are going to cover:
 
 * Internet (who knew)
 * Flashlight
-* Geocode
 * Camera
 * GPS
-* Microphone
 
 First, lets talk about how these are used in apps. (Make a list on the board on functionality and apps that people have use these sensors in)
 

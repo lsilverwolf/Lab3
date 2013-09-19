@@ -52,14 +52,18 @@ public class CameraActivity extends Activity {
         super.onActivityResult(requestCode, resultCode, data);
         switch (requestCode) {
             case TAKE_PICTURE:
-                if (resultCode == Activity.RESULT_OK) {
-                    getContentResolver().notifyChange(mUri, null);
-                    ContentResolver cr = getContentResolver();
-                    try {
-                        mPhoto = android.provider.MediaStore.Images.Media.getBitmap(cr, mUri);
-                        ((ImageView)findViewById(R.id.photoHolder)).setImageBitmap(mPhoto);
-                    } catch (Exception e) {
-                        Toast.makeText(this, e.getMessage(), Toast.LENGTH_SHORT).show();
+                if (data != null){
+                    if (resultCode != RESULT_CANCELED){
+                        if (resultCode == Activity.RESULT_OK) {
+                            getContentResolver().notifyChange(mUri, null);
+                            ContentResolver cr = getContentResolver();
+                            try {
+                                mPhoto = android.provider.MediaStore.Images.Media.getBitmap(cr, mUri);
+                                ((ImageView)findViewById(R.id.photoHolder)).setImageBitmap(mPhoto);
+                            } catch (Exception e) {
+                                Toast.makeText(this, e.getMessage(), Toast.LENGTH_SHORT).show();
+                            }
+                        }
                     }
                 }
         }
